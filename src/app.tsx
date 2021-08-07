@@ -2,7 +2,10 @@ import React from 'react';
 
 function App() {
   return (
-    <h1>Hello World from Jam!</h1>
+    <div className="center-flex-vh" style={{ minHeight: '100vh' }}>
+      <h1>React Starter</h1>
+      <p style={{ marginTop: '1rem' }}>My React app boilerplate.</p>
+    </div>
   );
 };
 
