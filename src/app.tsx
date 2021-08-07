@@ -7,6 +7,6 @@ function App() {
       <p style={{ marginTop: '1rem' }}>My React app boilerplate.</p>
     </div>
   );
-};
+}
 
 export default App;
