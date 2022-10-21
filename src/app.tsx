@@ -1,11 +1,14 @@
-import React from "react";
+import { Navigate, Route, Routes } from 'react-router-dom';
+
+import { ROUTE } from 'constants/routes';
+import { HomePage } from 'pages';
 
 function App() {
   return (
-    <div>
-      <h1>React Starter</h1>
-      <p>React app boilerplate.</p>
-    </div>
+    <Routes>
+      <Route path={ROUTE.HOME} element={<HomePage />} />
+      <Route path="*" element={<Navigate to={ROUTE.HOME} replace />} />
+    </Routes>
   );
 }
 
