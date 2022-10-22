@@ -6,9 +6,9 @@
   "scripts": {
     "start": "parcel -p 3000 --open",
     "build": "parcel build",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint --ignore-path .gitignore src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "format": "prettier --ignore-path .gitignore --write './src/**/*.{js,jsx,ts,tsx,css,md,json}'",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -24,7 +24,7 @@
     "url": "git+https://github.com/jamnguyen/react-starter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jam Nguyen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jamnguyen/react-starter/issues"
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/jamnguyen/react-starter#readme",
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.3.1",
+    "@types/node": "^18.11.3",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
@@ -51,8 +52,10 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.10",
+    "@reduxjs/toolkit": "^1.8.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2"
   }
 }

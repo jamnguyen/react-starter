@@ -2,8 +2,6 @@
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "importOrder": [
-    "<THIRD_PARTY_MODULES>",
-    "^(components|constants|pages|styles)(\/.*)?$",
     "^[./]"
   ],
   "importOrderSeparation": true,

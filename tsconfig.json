@@ -2,8 +2,13 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "jsx": "react-jsx",
-    "noEmit": true
-  }
+    "noEmit": true,
+    "paths": {
+      "~*": [
+        "./*"
+      ]
+    }
+  },
 }

@@ -9,6 +9,6 @@ My personalized React boilerplate.
 | Typescript          | JS with types           |
 | ESLint              | Code problems detector  |
 | Prettier            | Code formatter          |
-| Husky + Lint Staged | Tasks runner on commit  |
+| Husky + Lint Staged | Verify code on commit   |
 | MUI                 | React component library |
 | Redux Toolkit       | State manager           |

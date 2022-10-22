@@ -1,9 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { ROUTE } from '~/src/constants/routes';
+import { HomePage } from '~/src/pages';
 
-import { ROUTE } from 'constants/routes';
-import { HomePage } from 'pages';
-
-function App() {
+function Router() {
   return (
     <Routes>
       <Route path={ROUTE.HOME} element={<HomePage />} />
@@ -12,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Router;
