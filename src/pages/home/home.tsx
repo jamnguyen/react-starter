@@ -1,6 +1,5 @@
-import { Box } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { Heading } from '~/src/components';
 import { selectAppConfig } from '~src/app';
 
 export function HomePage() {
@@ -8,9 +7,11 @@ export function HomePage() {
 
   return (
     <Box>
-      <Heading>{name}</Heading>
-      <Heading>{author}</Heading>
-      <Heading>{version}</Heading>
+      <Typography variant="h1">{name}</Typography>
+      <Typography variant="body2">{author}</Typography>
+      <Typography variant="body2">{version}</Typography>
+      <Button variant="contained">Test</Button>
+      <Button color="secondary">Test</Button>
     </Box>
   );
 }

@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Provider as ReduxProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import theme from '~/src/styles';
@@ -11,7 +11,9 @@ function App() {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <ReduxProvider store={store}>
-          <Router />
+          <CssBaseline>
+            <Router />
+          </CssBaseline>
         </ReduxProvider>
       </ThemeProvider>
     </BrowserRouter>
