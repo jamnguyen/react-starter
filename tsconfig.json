@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "target": "es6",
-    "jsx": "react",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "baseUrl": "./src",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "noEmit": true,
     "paths": {
-      "~/*": ["./*"]
-    },
-    "experimentalDecorators": true
+      "~*": [
+        "./*"
+      ]
+    }
   },
-  "exclude": ["dist/**", "node_modules/**.*"]
 }

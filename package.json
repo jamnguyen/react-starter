@@ -2,43 +2,60 @@
   "name": "react-starter",
   "version": "0.0.1",
   "description": "Jam's React boilerplate.",
+  "source": "public/index.html",
   "scripts": {
-    "start": "parcel serve ./public/index.html -p 3000 --open",
-    "build": "parcel build ./public/index.html",
-    "test": "jest --watch"
+    "start": "APP_VERSION=$npm_package_version parcel -p 3000 --open",
+    "build": "APP_VERSION=$npm_package_version parcel build",
+    "lint": "eslint --ignore-path .gitignore src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --ignore-path .gitignore --write './src/**/*.{js,jsx,ts,tsx,css,md,json}'",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "npm run lint"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "npm run format"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamnguyen/react-starter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jam Nguyen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jamnguyen/react-starter/issues"
   },
   "homepage": "https://github.com/jamnguyen/react-starter#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "@types/react": "^17.0.16",
-    "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "babel-jest": "^27.0.6",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "jest": "^27.0.6",
-    "parcel": "^2.0.0-rc.0",
-    "prettier": "^2.3.2",
-    "react-test-renderer": "^17.0.2",
-    "typescript": "^4.3.5"
+    "@trivago/prettier-plugin-sort-imports": "^3.3.1",
+    "@types/node": "^18.11.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "parcel": "^2.7.0",
+    "prettier": "^2.7.1",
+    "process": "^0.11.10",
+    "typescript": "^4.8.4"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.10",
+    "@reduxjs/toolkit": "^1.8.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2"
   }
 }
