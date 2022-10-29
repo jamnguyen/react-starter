@@ -4,11 +4,13 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "lib": ["esnext", "dom"],
     "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "paths": {
-      "~*": [
-        "./*"
-      ]
-    }
-  },
+      "~*": ["./*"]
+    },
+    "strictNullChecks": true
+  }
 }
