@@ -1,7 +1,31 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 
-const textFont = "'Commissioner', san-serif";
-const headingFont = "'Playfair Display', serif";
+declare module '@mui/material/styles' {
+  interface TypographyVariants {
+    body3: React.CSSProperties;
+    body4: React.CSSProperties;
+  }
+
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    body3: React.CSSProperties;
+    body4: React.CSSProperties;
+  }
+}
+
+// Update the Typography's variant prop options
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    body3: true;
+    body4: true;
+    h4: false;
+    h5: false;
+    h6: false;
+  }
+}
+
+const textFont = "'Space Grotesk', sans-serif";
+const headingFont = "'Space Grotesk', sans-serif";
 
 const textBase = {
   fontFamily: textFont,
@@ -38,6 +62,10 @@ export default {
   body3: {
     ...textBase,
     fontSize: 14,
+  },
+  body4: {
+    ...textBase,
+    fontSize: 12,
   },
   button: {
     ...textBase,

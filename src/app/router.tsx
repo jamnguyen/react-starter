@@ -1,12 +1,13 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { ROUTE } from '~/src/constants/routes';
-import { HomePage } from '~/src/pages';
+import { ROUTES } from '~/src/constants/routes';
+import { HomePage, StyleGuidePage } from '~/src/pages';
 
 function Router() {
   return (
     <Routes>
-      <Route path={ROUTE.HOME} element={<HomePage />} />
-      <Route path="*" element={<Navigate to={ROUTE.HOME} replace />} />
+      <Route path={ROUTES.HOME.path} element={<HomePage />} />
+      <Route path={ROUTES.STYLE_GUIDE.path} element={<StyleGuidePage />} />
+      <Route path="*" element={<Navigate to={ROUTES.HOME.path} replace />} />
     </Routes>
   );
 }
