@@ -6,17 +6,17 @@
   "scripts": {
     "start": "APP_VERSION=$npm_package_version parcel -p 3000 --open",
     "build": "APP_VERSION=$npm_package_version parcel build",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --ignore-path .gitignore --write",
+    "lint": "eslint --ignore-path .gitignore src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --ignore-path .gitignore --write './src/**/*.{js,jsx,ts,tsx,css,md,json}'",
     "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-      "npm run lint"
+      "eslint"
     ],
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "npm run format"
+      "prettier --write"
     ]
   },
   "repository": {
