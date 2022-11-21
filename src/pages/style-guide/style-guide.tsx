@@ -82,6 +82,14 @@ export function StyleGuidePage() {
             vel, accumsan risus.
           </Typography>
         </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body4">
+            Body 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            est sem, mattis sed gravida et, lacinia non nisi. Pellentesque sed
+            sem lectus. Suspendisse at justo condimentum, pellentesque ipsum
+            vel, accumsan risus.
+          </Typography>
+        </Grid>
       </Grid>
     </Page>
   );

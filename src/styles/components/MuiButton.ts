@@ -8,6 +8,7 @@ export default {
   styleOverrides: {
     root: {
       boxShadow: 'none',
+      transitionDuration: '0s',
       textTransform: 'none',
       '&:hover, &:active, &:focus-visible': {
         boxShadow: 'none',

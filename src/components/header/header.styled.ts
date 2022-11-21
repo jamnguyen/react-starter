@@ -34,7 +34,10 @@ export const ButtonWrapper = styled(Box)(() => ({
 }));
 
 export const LogoLink = styled(Link)(() => ({
+  alignItems: 'center',
   height: '70%',
+  display: 'flex',
+  justifyContent: 'center',
 }));
 
 export const LogoImg = styled('img')(() => ({
