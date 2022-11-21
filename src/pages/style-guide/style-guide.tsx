@@ -1,11 +1,10 @@
 import { Button, Grid, Typography } from '@mui/material';
 
-import { Heading, Page } from '~src/components';
+import { Page } from '~src/components';
 
 export function StyleGuidePage() {
   return (
-    <Page>
-      <Heading>Style Guide</Heading>
+    <Page withHeading>
       <Grid container spacing={2}>
         <Grid item container xs={12} spacing={2}>
           <Grid item>

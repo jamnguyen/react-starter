@@ -1,6 +1,6 @@
 # React Starter
 
-My personalized React boilerplate.
+A React-based template repository using my favorite stucture and libraries.
 
 | Package             | Description             |
 | ------------------- | ----------------------- |
