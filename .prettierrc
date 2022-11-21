@@ -2,6 +2,7 @@
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "importOrder": [
+    "^~src/(api|app|components|constants|helpers|hooks|interfaces|pages|styles)",
     "^[./]"
   ],
   "importOrderSeparation": true,
@@ -9,7 +10,7 @@
   "insertPragma": false,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
-  "printWidth": 100,
+  "printWidth": 80,
   "proseWrap": "always",
   "quoteProps": "as-needed",
   "requirePragma": false,

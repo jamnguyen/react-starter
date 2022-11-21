@@ -1,6 +1,10 @@
-import { ReactNode } from 'react';
-import { HasChildrenProps } from '~src/interfaces';
+import { PropsWithChildren, ReactNode } from 'react';
 
-export interface HeadingProps extends HasChildrenProps {
+export interface HeadingProps {
+  children?: ReactNode;
   actionBar?: ReactNode;
+}
+
+export interface PageProps extends PropsWithChildren, HeadingProps {
+  withHeading?: boolean;
 }

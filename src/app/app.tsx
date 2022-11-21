@@ -1,7 +1,8 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Provider as ReduxProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import theme from '~/src/styles';
+
+import theme from '~src/styles';
 
 import Router from './router';
 import store from './store';

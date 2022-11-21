@@ -1,1 +1,2 @@
-export { default as useRoute } from './useRoute';
+export * from './useAsync';
+export * from './useRoute';

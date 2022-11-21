@@ -1,41 +1,40 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
+
 import { useRoute } from '~src/hooks';
-import { HasChildrenProps } from '~src/interfaces';
 
-import { ArrowBackIcon } from '../icon';
-import { Link } from '../link';
-import { HeadingProps } from './layout.interface';
-import { BackerContainer, PageLayout } from './layout.styled';
-
-export function Page({ children }: HasChildrenProps) {
-  return (
-    <PageLayout>
-      <Container>{children}</Container>
-    </PageLayout>
-  );
-}
+import { HeadingProps, PageProps } from './layout.interface';
+import { HeadingWrapper, PageLayout } from './layout.styled';
 
 export function Heading({ children, actionBar }: HeadingProps) {
   const {
-    route: { parent },
+    route: { name },
   } = useRoute();
 
   return (
-    <Box>
-      {parent && (
-        <BackerContainer>
-          <Link to={parent.path}>
-            <ArrowBackIcon />
-            {parent.name}
-          </Link>
-        </BackerContainer>
-      )}
-      <Grid container direction="row" alignItems="center" justifyContent="space-between" mb={4}>
+    <HeadingWrapper>
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        mb={2}
+      >
         <Grid item>
-          <Typography variant="h1">{children}</Typography>
+          <Typography variant="h1">{children || name}</Typography>
         </Grid>
         {actionBar && <Grid item>{actionBar}</Grid>}
       </Grid>
-    </Box>
+    </HeadingWrapper>
+  );
+}
+
+export function Page({ children, actionBar, withHeading = false }: PageProps) {
+  return (
+    <PageLayout>
+      <Container>
+        {withHeading && <Heading actionBar={actionBar} />}
+        {children}
+      </Container>
+    </PageLayout>
   );
 }
