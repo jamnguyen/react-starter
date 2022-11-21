@@ -1,4 +1,5 @@
 import { Button, Grid, Typography } from '@mui/material';
+
 import { Heading, Page } from '~src/components';
 
 export function StyleGuidePage() {
@@ -59,23 +60,34 @@ export function StyleGuidePage() {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body1">
-            Body 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut est sem, mattis sed
-            gravida et, lacinia non nisi. Pellentesque sed sem lectus. Suspendisse at justo
-            condimentum, pellentesque ipsum vel, accumsan risus.
+            Body 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            est sem, mattis sed gravida et, lacinia non nisi. Pellentesque sed
+            sem lectus. Suspendisse at justo condimentum, pellentesque ipsum
+            vel, accumsan risus.
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body2">
-            Body 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut est sem, mattis sed
-            gravida et, lacinia non nisi. Pellentesque sed sem lectus. Suspendisse at justo
-            condimentum, pellentesque ipsum vel, accumsan risus.
+            Body 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            est sem, mattis sed gravida et, lacinia non nisi. Pellentesque sed
+            sem lectus. Suspendisse at justo condimentum, pellentesque ipsum
+            vel, accumsan risus.
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body3">
-            Body 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut est sem, mattis sed
-            gravida et, lacinia non nisi. Pellentesque sed sem lectus. Suspendisse at justo
-            condimentum, pellentesque ipsum vel, accumsan risus.
+            Body 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            est sem, mattis sed gravida et, lacinia non nisi. Pellentesque sed
+            sem lectus. Suspendisse at justo condimentum, pellentesque ipsum
+            vel, accumsan risus.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body4">
+            Body 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            est sem, mattis sed gravida et, lacinia non nisi. Pellentesque sed
+            sem lectus. Suspendisse at justo condimentum, pellentesque ipsum
+            vel, accumsan risus.
           </Typography>
         </Grid>
       </Grid>

@@ -12,3 +12,4 @@ My personalized React boilerplate.
 | Husky + Lint Staged | Verify code on commit   |
 | MUI                 | React component library |
 | Redux Toolkit       | State manager           |
+| axios               | API handler             |

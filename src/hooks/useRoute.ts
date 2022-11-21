@@ -1,23 +1,34 @@
 import { Location, useLocation } from 'react-router-dom';
-import { ROUTES } from '~src/constants/routes';
+
+import { ROUTES } from '~src/constants';
 import { Route } from '~src/interfaces';
 
-export default function useRoute(): Location & { route: Route } {
+export function useRoute(): Location & { route: Route } {
   const location = useLocation();
 
   if (location.pathname === '/') return { ...location, route: ROUTES.HOME };
 
-  const paths: Route[] = location.pathname
+  const paths: Route[] = [];
+  location.pathname
+    .replace(/[?].*/g, '')
     .split('/')
-    .slice(-2)
-    .map(path => {
-      const found: Route | undefined = Object.values(ROUTES).find(item => item.path === `/${path}`);
-      return found || ROUTES.HOME;
-    }) as Route[];
+    .reduce((acc, current) => {
+      const path =
+        acc === '/' ? `/${current}` : acc ? `${acc}/${current}` : '/';
 
-  const route = paths.pop() as Route;
-  if (paths.length >= 1) {
-    route.parent = paths.pop() as Route;
+      const route: Route | undefined = Object.values(ROUTES).find(
+        item => item.path === path,
+      );
+      paths.push(route || ROUTES.HOME);
+
+      return path;
+    }, '');
+
+  const routes = paths.slice(-2);
+  const route = routes.pop() as Route;
+
+  if (routes.length >= 1) {
+    route.parent = routes.pop() as Route;
   }
 
   return { ...location, route };

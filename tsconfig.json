@@ -2,15 +2,18 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "jsx": "react-jsx",
     "lib": ["esnext", "dom"],
     "noEmit": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
+    "strictNullChecks": true,
+
+    // Parcel doesn't support yet
+    // Absolute path must be ~src/...
+    "baseUrl": ".",
     "paths": {
       "~*": ["./*"]
     },
-    "strictNullChecks": true
   }
 }

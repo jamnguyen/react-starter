@@ -1,23 +1,34 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
+import { CSSProperties } from 'react';
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
-    body3: React.CSSProperties;
-    body4: React.CSSProperties;
+    body3: CSSProperties;
+    body4: CSSProperties;
+    bodyBold1: CSSProperties;
+    bodyBold2: CSSProperties;
+    bodyBold3: CSSProperties;
+    bodyBold4: CSSProperties;
   }
 
-  // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
-    body3: React.CSSProperties;
-    body4: React.CSSProperties;
+    body3: CSSProperties;
+    body4: CSSProperties;
+    bodyBold1: CSSProperties;
+    bodyBold2: CSSProperties;
+    bodyBold3: CSSProperties;
+    bodyBold4: CSSProperties;
   }
 }
 
-// Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     body3: true;
     body4: true;
+    bodyBold1: true;
+    bodyBold2: true;
+    bodyBold3: true;
+    bodyBold4: true;
     h4: false;
     h5: false;
     h6: false;
@@ -66,6 +77,26 @@ export default {
   body4: {
     ...textBase,
     fontSize: 12,
+  },
+  bodyBold1: {
+    ...textBase,
+    fontSize: 18,
+    fontWeight: 700,
+  },
+  bodyBold2: {
+    ...textBase,
+    fontSize: 16,
+    fontWeight: 700,
+  },
+  bodyBold3: {
+    ...textBase,
+    fontSize: 14,
+    fontWeight: 700,
+  },
+  bodyBold4: {
+    ...textBase,
+    fontSize: 12,
+    fontWeight: 700,
   },
   button: {
     ...textBase,

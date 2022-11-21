@@ -1,11 +1,11 @@
 {
   "name": "react-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Jam's React boilerplate.",
   "source": "public/index.html",
   "scripts": {
-    "start": "APP_VERSION=$npm_package_version parcel -p 3000 --open",
-    "build": "APP_VERSION=$npm_package_version parcel build",
+    "start": "parcel -p 3000 --open",
+    "build": "parcel build",
     "lint": "eslint --ignore-path .gitignore src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --ignore-path .gitignore --write './src/**/*.{js,jsx,ts,tsx,css,md,json}'",
@@ -13,10 +13,10 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-      "npm run lint"
+      "eslint"
     ],
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "npm run format"
+      "prettier --write"
     ]
   },
   "repository": {
@@ -38,6 +38,7 @@
     "@types/react-router": "^5.1.19",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
+    "buffer": "^6.0.3",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -55,6 +56,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
     "@reduxjs/toolkit": "^1.8.6",
+    "axios": "^1.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",

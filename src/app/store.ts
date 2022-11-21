@@ -1,17 +1,21 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 
-import ConfigReducer from './config';
+import { authSlice, configsSlice } from './slices';
 
 const store = configureStore({
   reducer: {
-    config: ConfigReducer,
+    auth: authSlice.reducer,
+    configs: configsSlice.reducer,
   },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
-export default store;
 
-export * from './config';
+export default store;

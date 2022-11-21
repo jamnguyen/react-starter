@@ -1,4 +1,4 @@
-import { Theme, alpha } from '@mui/material';
+import { Theme } from '@mui/material';
 
 export default {
   defaultProps: {
@@ -7,8 +7,9 @@ export default {
   },
   styleOverrides: {
     root: {
-      borderRadius: 0,
       boxShadow: 'none',
+      transitionDuration: '0s',
+      textTransform: 'none',
       '&:hover, &:active, &:focus-visible': {
         boxShadow: 'none',
       },
